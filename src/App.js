@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import classes from './App.css'; //import whatever the name
 import Person from './Person/Person';
 
 class App extends Component {        // ----- Established  way of creating component with class
@@ -86,19 +86,19 @@ class App extends Component {        // ----- Established  way of creating compo
             btnStyle.backgroundColor = 'red';
       }
 
-      const classes = [];       // ['red', 'bold'].join(' '); // 'red bold' at the end
+      const assignedClasses = [];       // ['red', 'bold'].join(' '); // 'red bold' at the end
       if(this.state.persons.length <= 2) {
-        classes.push('red');
+        assignedClasses.push(classes.red);
       }
       if(this.state.persons.length <= 1) {
-        classes.push('bold'); // vlasses = ['red', 'bold']
+        assignedClasses.push(classes.bold); // classes = ['red', 'bold']
       }
 
       return (
 
-        <div className="App">
+        <div className={classes.App}>
           <h1>I'm a React App</h1>
-          <p className={classes.join(' ')}>This is really working</p>
+          <p className={assignedClasses.join(' ')}>This is really working</p>
           <button 
               style = {btnStyle}
               onClick={this.togglePersonsHandler}>Toggle Persons
