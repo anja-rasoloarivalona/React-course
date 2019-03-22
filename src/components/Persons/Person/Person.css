@@ -1,0 +1,23 @@
+.Person {
+    width: 60%;
+    margin: 16px auto;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    padding: 16px;
+    text-align: center;
+}
+
+ @media (min-width: 500px) {
+    .Person {
+        width: 450px;
+    }
+} 
+
+/* BE AWARE : all css stylesheet have effects on the global document and not only the coomponet 
+IT S NOT BLOCKED SCOPE */
+
+
+/* SO use inline style to make sure it only applies to this single element : to block the scope */
+
+
+/* BUT WITH CSS MODULES ENABLED, they are now scoped */ 
